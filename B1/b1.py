@@ -1,6 +1,8 @@
 import sys, math
 
-giatrinhapvao = [int(i) for i in input('Nhap n, q: ').split()]
+try: giatrinhapvao = [int(i) for i in input('Nhap n, q: ').split()] 
+except: print('Nhap Loi'), sys.exit()
+
 daysok = []
 n = giatrinhapvao[0]
 q = giatrinhapvao[1]
@@ -12,6 +14,7 @@ if 2 <= n <= 10**6 and q <= 10**6 and len(giatrinhapvao) == 2:
             daysok.append(l)
         else:
             print('Nhap loi')
+            sys.exit()
 else:
     print('Nhap loi')
     sys.exit()
