@@ -1,13 +1,14 @@
 import sys, math
 
-giatrinhapvao = input('Nhap n, q: ').split(' ')
+giatrinhapvao = [int(i) for i in input('Nhap n, q: ').split()]
 daysok = []
-n = int(giatrinhapvao[0])
-q = int(giatrinhapvao[1])
-if n >= 2 and n <= 10**6 and q <= 10**6 and len(giatrinhapvao) == 2:
+n = giatrinhapvao[0]
+q = giatrinhapvao[1]
+
+if 2 <= n <= 10**6 and q <= 10**6 and len(giatrinhapvao) == 2:
     for i in range(1, q + 1):
         l = int(input('Nhap K: '))
-        if l >= 2 and l <= n:
+        if 2 <= l <= n:
             daysok.append(l)
         else:
             print('Nhap loi')
