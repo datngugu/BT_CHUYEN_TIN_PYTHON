@@ -22,4 +22,6 @@ for i in range(0, n):
         if ucln > maxUCLN:
             maxUCLN = ucln
 
-print(maxUCLN)
+with open(".//b8.OUT", 'w') as f:
+    f.write(str(maxUCLN))
+    f.close()
